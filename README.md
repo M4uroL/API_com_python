@@ -72,10 +72,3 @@ curl -X DELETE http://localhost:5000/animes/1
 
 Os animes são guardados em uma lista na memória da aplicação. Os dados não são persistidos: eles serão perdidos quando o servidor for reiniciado.
 
-## Observações
-
-- O código atual não define uma resposta específica para IDs inexistentes.
-- A rota `PUT` atualiza o anime, mas não retorna uma resposta explícita.
-- Na rota `DELETE`, o `return` está dentro do laço de busca, o que pode interromper a verificação antes de encontrar o anime.
-- Não há validação dos dados recebidos nem geração automática de IDs.
-- `debug=True` é útil durante o desenvolvimento, mas deve ser desativado em produção.
